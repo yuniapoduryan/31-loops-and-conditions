@@ -105,3 +105,35 @@ for (let i = 1; i <= userNumber; i++) {
 
 }
 alert('Divisors of your number are ' + divisors)
+
+let string = prompt("let's check if this string is a palindrome")
+let stringLength = string.length
+let isPalindrome = true
+
+for (let index = 0; index < stringLength / 2; index++) {
+    if (string[index] !== string[stringLength - 1 - index]) {
+        isPalindrome = false
+        break
+    }
+}
+if (isPalindrome) {
+    alert("it's a palindrome")
+} else {
+    alert("it's not a palindrome")
+}
+
+let purchaseAmount = +prompt('Enter purchase amount')
+let discountedAmount
+
+if (purchaseAmount >= 200 && purchaseAmount <= 300) {
+    discountedAmount = purchaseAmount - (purchaseAmount * 3 / 100)
+    alert("Your discounted amount is " + discountedAmount)
+} else if (purchaseAmount >= 300 && purchaseAmount <= 500) {
+    discountedAmount = purchaseAmount - (purchaseAmount * 5 / 100)
+    alert("Your discounted amount is " + discountedAmount)
+} else if (purchaseAmount >= 500) {
+    discountedAmount = purchaseAmount - (purchaseAmount * 7 / 100)
+    alert("Your discounted amount is " + discountedAmount)
+} else {
+    alert("Your purchase amount is too low to have a discount")
+}
