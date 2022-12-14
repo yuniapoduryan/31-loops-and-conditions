@@ -72,7 +72,9 @@ for (let i = rangeStart; i <= rangeEnd; i++) {
 
 alert(sum)
 
-greatest common divisor
+//greatest common divisor
+
+
 let firstNumber = +prompt('Enter first number')
 let secondNumber = +prompt('Enter second number')
 let gcd
