@@ -139,3 +139,32 @@ if (purchaseAmount >= 200 && purchaseAmount <= 300) {
 } else {
     alert("Your purchase amount is too low to have a discount")
 }
+
+let positive = 0
+let negative = 0
+let zeros = 0
+let even = 0
+let odd = 0
+    // let nums = []
+
+for (let i = 1; i <= 10; i++) {
+    const num = +prompt("enter a number");
+    negative += num < 0
+    positive += num > 0
+    zeros += num == 0
+    even += !(num % 2)
+    odd += num % 2
+
+}
+alert(`positive: ${positive},\nnegative: ${negative},\nzeros: ${zeros},\neven: ${even},\nodd: ${odd}`)
+
+// days of the week cycle
+let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday", ];
+let currDay = 0;
+while (confirm(`${days[currDay]}. Do you want to see a next day?`)) {
+    if (currDay === days.length - 1) {
+        currDay = 0
+    } else {
+        currDay = (currDay + 1);
+    }
+}
